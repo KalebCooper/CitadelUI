@@ -1,11 +1,4 @@
 //
-//  File.swift
-//  
-//
-//  Created by Kaleb Cooper on 11/22/20.
-//
-
-//
 //  UIView+Mode.swift
 //  slym-ios
 //
@@ -30,6 +23,8 @@ public enum ViewState {
 protocol CLViewStateDelegate: class {
     func view(updatedTo state: ViewState)
 }
+
+/// Convenience `UIView` subclass that provides extended functionality to speed up development.
 public class CLView: UIView {
     
     weak var stateDelegate: CLViewStateDelegate?
