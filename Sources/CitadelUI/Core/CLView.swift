@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CitadelCore
 
 public protocol ViewConfigurable {
     
@@ -82,6 +83,7 @@ public class CLView: UIView {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        print(CitadelHelper.constant)
     }
     
     required public init?(coder aDecoder: NSCoder) {
