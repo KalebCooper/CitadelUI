@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CitadelCore",
+        "repositoryURL": "https://github.com/KalebCooper/CitadelCore",
+        "state": {
+          "branch": null,
+          "revision": "bc74582c6bfdc696bc0e192bccfd47d9f3053ecf",
+          "version": "0.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
