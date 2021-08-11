@@ -6,6 +6,7 @@
 //  Copyright © 2020 Cooper Labs LLC. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public enum CLLabelIconPosition {
@@ -43,3 +44,4 @@ public class CLLabel: UILabel {
     }
     
 }
+#endif

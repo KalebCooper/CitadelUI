@@ -1,3 +1,5 @@
+#if os(iOS)
+
 import UIKit
 
 enum CountingMethod {
@@ -151,3 +153,4 @@ final class AnimatedLabel: UILabel {
 	}
 
 }
+#endif

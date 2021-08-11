@@ -6,8 +6,8 @@
 //  Copyright © 2020 Cooper Labs LLC. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
-import CitadelCore
 
 public protocol ViewConfigurable {
     
@@ -21,7 +21,7 @@ public enum ViewState {
     case loading
     case done
 }
-protocol CLViewStateDelegate: class {
+protocol CLViewStateDelegate: AnyObject {
     func view(updatedTo state: ViewState)
 }
 
@@ -83,10 +83,10 @@ public class CLView: UIView {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        print(CitadelHelper.constant)
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
+#endif
