@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct InfoText: View {
+public struct InfoText: View {
     let text: String
     
-    var body: some View {
+    public var body: some View {
         #if os(iOS)
         ios
         #elseif os(macOS)
@@ -36,7 +36,7 @@ struct InfoText: View {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    init(_ text: String) {
+    public init(_ text: String) {
         self.text = text
     }
 }

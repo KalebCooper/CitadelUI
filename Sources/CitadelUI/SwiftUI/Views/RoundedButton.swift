@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct RoundedButton: View {
-    enum Style: Equatable {
+public struct RoundedButton: View {
+    public enum Style: Equatable {
         case primary
         case secondary
     }
@@ -18,7 +18,7 @@ struct RoundedButton: View {
     var action: () -> Void
     let style: Style
     
-    var body: some View {
+    public var body: some View {
         #if os(iOS)
         ios
         #elseif os(macOS)
@@ -53,7 +53,7 @@ struct RoundedButton: View {
         })
     }
     
-    init(
+    public init(
         _ title: String,
         style: Style = .primary,
         action: @escaping () -> Void

@@ -8,11 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct RoundedTextField: View {
+public struct RoundedTextField: View {
     let placeholder: String
     var text: Binding<String>
     
-    var body: some View {
+    public var body: some View {
         #if os(iOS)
         ios
         #elseif os(macOS)
@@ -38,7 +38,7 @@ struct RoundedTextField: View {
             .padding([.leading, .trailing])
     }
     
-    init(_ placeholder: String, text: Binding<String>) {
+    public init(_ placeholder: String, text: Binding<String>) {
         self.placeholder = placeholder
         self.text = text
     }
