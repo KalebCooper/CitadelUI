@@ -18,7 +18,7 @@ enum AnimationDuration {
     ///0 seconds
     case noAnimation
 
-    var value: TimeInterval {
+    var measurementValue: TimeInterval {
         switch self {
         case .laborious: return 1.5
         case .plodding: return 1.0
@@ -75,15 +75,15 @@ final class AnimatedLabel: UILabel {
 		timer?.invalidate()
 		timer = nil
 
-		if duration.value == 0.0 {
-			setTextValue(value: to)
+        if duration.measurementValue == 0.0 {
+			setTextValue(measurementValue: to)
 			completion?()
 			return
 		}
 
 		easingRate = 3.0
 		progress = 0.0
-		totalTime = duration.value
+		totalTime = duration.measurementValue
 		lastUpdate = Date.timeIntervalSinceReferenceDate
 		rate = 3.0
 
@@ -144,12 +144,12 @@ final class AnimatedLabel: UILabel {
 			progress = totalTime
 		}
 
-		setTextValue(value: currentValue)
+		setTextValue(measurementValue: currentValue)
 		if progress == totalTime { completion?() }
 	}
 
-	private func setTextValue(value: Float) {
-		text = String(format: customFormatBlock?() ?? decimalPoints.format, value)
+	private func setTextValue(measurementValue: Float) {
+		text = String(format: customFormatBlock?() ?? decimalPoints.format, measurementValue)
 	}
 
 }
